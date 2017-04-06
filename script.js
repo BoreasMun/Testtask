@@ -41,9 +41,34 @@
         templateOptions: {
             type: 'password',
             label: 'Password',
-            minlength: 4,
-            maxlength: 16,
+            minlength: 6,
+            maxlength: 20,
             required: true
+        },
+        validators: {
+            oneLetter: {
+                expression: function(viewValue, modelValue) {
+                    var value = modelValue || viewValue;
+                    return /(?=.*[0-9])/.test(value);
+                },
+                message: '"Password must contain at least one digit"'
+            },
+            oneSpecialCharacter: {
+                expression: function(viewValue, modelValue) {
+                    var value = modelValue || viewValue;
+                    return /(?=.*[!@#$%^&*])/.test(value);
+                },
+                message: '"Password must contain at least one special character"'
+            },
+            notAnEmail: {
+                expression: function(viewValue, modelValue, scope) {
+                    var value = modelValue || viewValue;
+                    if (!scope.model.email) return false;
+
+                    return !value.includes(scope.model.email);
+                },
+                message: '"Password must NOT contain your e-mail"'
+            }
         },
         ngModelAttrs: {
             minlength: {
