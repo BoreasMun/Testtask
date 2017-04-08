@@ -52,11 +52,14 @@
        type="{{::to.type}}" 
        aria-label="{{::to.label}}"
        ng-class="::to.className"
-       uib-popover="I appeared on focus! Click away and I'll vanish..."  
+       uib-popover-template="'popoverTemplate.html'"  
        popover-trigger="'focus'"
        popover-placement="right"/>
 
 </lx-text-field>
+</script>
+<script type="text/ng-template" id="popoverTemplate.html">
+        <div>testowy template</div>
 </script>
 </body>
 
