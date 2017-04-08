@@ -15,7 +15,7 @@
       'use strict';
     var vm = this;
 
-    vm.exampleTitle = 'Zadanko testowe';
+    vm.exampleTitle = 'Login page';
     vm.formData = {};  // the data object
     vm.formOptions = {}; // optional form parameters
     vm.formFields = [{

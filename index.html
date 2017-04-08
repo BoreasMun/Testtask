@@ -16,14 +16,22 @@
   </head>
 
   <body ng-app="app" ng-controller="MainCtrl as vm">
-    <div>
+    <div class="main-login-form card">
+
+      <div class="form">
       <h1>{{::vm.exampleTitle}}</h1>
         <formly-form model="vm.formData" fields="vm.formFields" class="bgc-red-100">
         </formly-form>
+        <div class="submit-button">
+          <lx-button lx-type="raised">Submit</lx-button>
+        </div>
       </form>
+      </div>
+      
     </div>
     
 <script src="script.js"></script>    
+<link rel="stylesheet" href="style.css">
 </body>
 
 </html>
