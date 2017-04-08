@@ -55,6 +55,7 @@ app.run(function(formlyConfig) {
             atLeastCharacters: {
                 expression: function(viewValue, modelValue) {
                     var value = modelValue || viewValue;
+                    if (!value) return false;
                     return value.length >= 6 && value.length <= 20;
                 },
                 message: '"At least 6 characters and maximum 20 characters"'
