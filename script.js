@@ -4,7 +4,8 @@
        'ngMessages',
         'ngAria',
         'formly',
-        'formlyLumx'
+        'formlyLumx',
+        'ui.bootstrap'
       ], function config() {
       // set templates here
 
@@ -12,7 +13,7 @@
 
 app.run(function(formlyConfig) {
     formlyConfig.setType({
-        name: 'lx-input',
+        name: 'lx-input-custom',
         templateUrl: 'custom-template.html'
     });
 });
@@ -41,7 +42,7 @@ app.run(function(formlyConfig) {
         }
         },{
         key: 'password',
-        type: 'lx-input',
+        type: 'lx-input-custom',
         wrapper: 'lx-wrapper-errors',
         templateOptions: {
             type: 'password',

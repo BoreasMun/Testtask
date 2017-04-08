@@ -12,6 +12,11 @@
     <script src="./bower_components/lumx/dist/lumx.js"></script>
     <script src="./bower_components/angular-formly/formly.js"></script>
     <script src="./bower_components/angular-formly-templates-lumx/dist/formlyLumx.js"></script>
+    <!-- bootstrap -->
+    <script src="./bower_components/bootstrap/bootstrap.js"></script>
+    <link rel="stylesheet" href="./bower_components/bootstrap/bootstrap.css">
+    <script src="./bower_components/angular-ui-bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    
     <title>Zadanko testowe</title>
   </head>
 
@@ -46,7 +51,10 @@
 <input ng-model="model[options.key]"
        type="{{::to.type}}" 
        aria-label="{{::to.label}}"
-       ng-class="::to.className"/>
+       ng-class="::to.className"
+       uib-popover="I appeared on focus! Click away and I'll vanish..."  
+       popover-trigger="'focus'"
+       popover-placement="right"/>
 
 </lx-text-field>
 </script>
