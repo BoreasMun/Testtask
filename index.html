@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./bower_components/bootstrap/bootstrap.css">
     <script src="./bower_components/angular-ui-bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
     
+
     <title>Zadanko testowe</title>
   </head>
 
@@ -37,6 +38,8 @@
     
 <script src="script.js"></script>    
 <link rel="stylesheet" href="style.css">
+<!--font awesome-->
+    <link rel="stylesheet" href="./bower_components/font-awesome/font-awesome.css">
 <script type="text/ng-template" id="custom-template.html">
 
 <lx-text-field data-model="::model[options.key]"
@@ -55,11 +58,12 @@
        uib-popover-template="'popoverTemplate.html'"  
        popover-trigger="'focus'"
        popover-placement="right"/>
-
 </lx-text-field>
+
 </script>
 <script type="text/ng-template" id="popoverTemplate.html">
-        <div>testowy template</div>
+    <i class="fa fa-camera-retro"></i> fa-2x
+        <div >{{fc.$error.oneSpecialCharacter}}</div>
 </script>
 </body>
 
