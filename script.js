@@ -7,10 +7,15 @@
         'formlyLumx'
       ], function config() {
       // set templates here
-      
+
     });
 
-
+app.run(function(formlyConfig) {
+    formlyConfig.setType({
+        name: 'lx-input',
+        templateUrl: 'custom-template.html'
+    });
+});
   app.controller('MainCtrl', function MainCtrl($scope) {
       'use strict';
     var vm = this;
