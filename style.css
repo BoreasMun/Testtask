@@ -9,7 +9,7 @@ body{
   background-color: grey;
 }
 .main-login-form {
-    width: 600px;
+    width: 800px;
     height: 400px;
     display: flex;
     align-items: center;
@@ -21,4 +21,13 @@ body{
 }
 .form {
     width: 300px;
+}
+
+.popup-list {
+    list-style-type: none;
+    font-size: 10px;
+}
+.password-popover {
+    width: 300px;
+    position: absolute;
 }
