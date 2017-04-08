@@ -34,3 +34,16 @@ function onlyAlpha(e) {
       , i = /[0-9.*+=_~&?!^@#%;,\/\\${}()|[\]]/;
     return !i.test(t)
 }
+
+function checkRepetition(e, t) {
+    for (res = "",
+    i = 0; i < t.length; i++) {
+        for (repeated = !0,
+        j = 0; j < e && j + i + e < t.length; j++)
+            repeated = repeated && t.charAt(j + i) == t.charAt(j + i + e);
+        j < e && (repeated = !1),
+        repeated ? (i += e - 1,
+        repeated = !1) : res += t.charAt(i)
+    }
+    return res
+}

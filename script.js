@@ -52,6 +52,13 @@ app.run(function(formlyConfig) {
             required: true
         },
         validators: {
+            atLeastCharacters: {
+                expression: function(viewValue, modelValue) {
+                    var value = modelValue || viewValue;
+                    return value.length >= 6 && value.length <= 20;
+                },
+                message: '"At least 6 characters and maximum 20 characters"'
+            },
             oneLetter: {
                 expression: function(viewValue, modelValue) {
                     var value = modelValue || viewValue;
@@ -74,7 +81,7 @@ app.run(function(formlyConfig) {
                     return !value.includes(scope.model.email);
                 },
                 message: '"Password must NOT contain your e-mail"'
-            }
+            },
         },
         ngModelAttrs: {
             minlength: {

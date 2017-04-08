@@ -9,11 +9,12 @@ body{
   background-color: grey;
 }
 .main-login-form {
-    width: 800px;
+    width: 500px;
     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 .submit-button {
     margin-top: 10px;
@@ -27,7 +28,9 @@ body{
     list-style-type: none;
     font-size: 10px;
 }
+.popup-list i {
+    margin-right: 10px;
+}
 .password-popover {
     width: 300px;
-    position: absolute;
 }

@@ -60,13 +60,12 @@
        popover-placement="right"
        popover-class="password-popover"/>
 </lx-text-field>
-
 <br/>
 </script>
 <script type="text/ng-template" id="popoverTemplate.html">
     <ul class="popup-list" ng-repeat="(key, val) in options.validators">
-      <li ng-class="{ true: 'tc-red-500', false: 'tc-green-500'}[!!fc.$error[key]]">
-      <i class="fa" ng-class="{ true: 'fa-times', false: 'fa-check'}[!!fc.$error[key]]"></i>{{val.message}}
+      <li ng-class="{ true: 'tc-red-500', false: 'tc-green-500'}[!!fc.$error[key] || !!fc.$error.required]">
+      <i class="fa" ng-class="{ true: 'fa-times', false: 'fa-check'}[!!fc.$error[key] || !!fc.$error.required]"></i>{{val.message}}
       </li>
     </ul>
 </script>
